@@ -1,5 +1,15 @@
+
+// Assigning colour pallette for website
 $primarycolor: #A9C6D9;
 $secondarycolor: #88A67B;
 $thirdcolor: #A6705D;
 $fourthcolor: #F24C3D;
 $fifthcolor: #59332A;
+
+.container {
+    display : grid;
+}
+
+#navpersonal {
+    border: 2px solid red;
+}

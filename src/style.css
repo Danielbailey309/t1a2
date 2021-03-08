@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+}
+
+#navpersonal {
+  border: 2px solid red;
+}
+
+#personal {
+  justify-content: flex-end;
+}/*# sourceMappingURL=style.css.map */
