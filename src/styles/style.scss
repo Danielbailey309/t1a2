@@ -1,0 +1,65 @@
+
+// Assigning colour pallette for website
+$primarycolor: #A9C6D9;
+$secondarycolor: #88A67B;
+$thirdcolor: #A6705D;
+$fourthcolor: #F24C3D;
+$fifthcolor: #59332A;
+
+body {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas:
+    "header"
+    "navpersonal"
+    "main"
+    "aside"
+    "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    grid-area: nav;
+}
+
+// grid to contain nav and personal
+#navpersonal {
+    grid-area: navpersonal;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas:
+    "nav selfportrait"
+    "nav selfportrait"
+    "nav selfportrait"
+    "nav emailphone"
+    "nav emailphone";
+}
+
+#selfportrait {
+    grid-area: photo;
+}
+
+#emailphone {
+    grid-area: emailphone;
+}

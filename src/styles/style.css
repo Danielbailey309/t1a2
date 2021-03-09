@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, -webkit-min-content);
+  grid-template-rows: repeat(5, min-content);
+  grid-template-areas: "header" "navpersonal" "main" "aside" "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#navpersonal {
+  grid-area: navpersonal;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, -webkit-min-content);
+  grid-template-rows: repeat(5, min-content);
+  grid-template-areas: "nav selfportrait" "nav selfportrait" "nav selfportrait" "nav emailphone" "nav emailphone";
+}
+
+#selfportrait {
+  grid-area: photo;
+}
+
+#emailphone {
+  grid-area: emailphone;
+}/*# sourceMappingURL=style.css.map */
