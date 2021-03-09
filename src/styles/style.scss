@@ -6,60 +6,98 @@ $thirdcolor: #A6705D;
 $fourthcolor: #F24C3D;
 $fifthcolor: #59332A;
 
-body {
-    margin: 0;
-}
+// v1 of website design. no longer used. Redesigned layout starts on line 69
+
+// body {
+//     display: grid;
+//     grid-template-columns: 100%;
+//     grid-template-rows: repeat(5, min-content);
+//     grid-template-areas:
+//     "header"
+//     "navpersonal"
+//     "main"
+//     "aside"
+//     "footer";
+// }
+
+// header {
+//     grid-area: header;
+// }
+
+// main {
+//     grid-area: main;
+// }
+
+// aside {
+//     grid-area: aside;
+// }
+
+// footer {
+//     grid-area: footer;
+// }
+
+// // grid to contain nav and personal
+// #navpersonal {
+//     grid-area: navpersonal;
+//     display: grid;
+//     grid-template-columns: 1fr 2fr;
+//     grid-template-rows: repeat(5, min-content);
+//     grid-template-areas:
+//     "navitems selfportrait"
+//     "navitems selfportrait"
+//     "navitems selfportrait"
+//     "navitems emailphone"
+//     "navitems emailphone";
+// }
+
+// #navitems {
+//     grid-area: navitems;
+// }
+
+// #selfportrait {
+//     grid-area: selfportrait;
+// }
+
+// #emailphone {
+//     grid-area: emailphone;
+// }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, min-content);
-    grid-template-areas:
-    "header"
-    "navpersonal"
-    "main"
-    "aside"
-    "footer";
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(3, min-content);
+    // grid-template-areas:
+    // "header"
+    // "nav"
+    // "selfportrait"
+    // "blurb"
+    // "main"
+    // "footer";
 }
 
-header {
-    grid-area: header;
-}
+// header {
+//     grid-area: header;
+// }
 
-main {
-    grid-area: main;
-}
+// nav {
+//     grid-area: nav;
+// }
 
-aside {
-    grid-area: aside;
-}
+// #selfportrait {
+//     grid-area: selfportrait;
+// }
 
-footer {
-    grid-area: footer;
-}
+// #blurb {
+//     grid-area: blurb;
+// }
 
-nav {
-    grid-area: nav;
-}
+// main {
+//     grid-area: main;
+// }
 
-// grid to contain nav and personal
-#navpersonal {
-    grid-area: navpersonal;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(5, min-content);
-    grid-template-areas:
-    "nav selfportrait"
-    "nav selfportrait"
-    "nav selfportrait"
-    "nav emailphone"
-    "nav emailphone";
-}
-
-#selfportrait {
-    grid-area: selfportrait;
-}
-
-#emailphone {
-    grid-area: emailphone;
-}
+// footer {
+//     grid-area: footer;
+// }

@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="container">
         <h1>Daniel Bailey</h1>
     </header>
     
-<!-- div to contain nav and personal info together -->
-    <div id="navpersonal">
-        <nav>
+        <nav class="container">
             <h2>Navigation</h2>
-            <ul>
+            <ul id="navitems">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -26,14 +24,13 @@
         
         <!-- personal area for self portrait and details -->
         <div>
-            <img src="https://picsum.photos/200" alt="Daniel Mugshot" id="selfportrait">
-            <div class="container" id="emailphone">
+            <img src="https://picsum.photos/200" alt="Daniel Mugshot" class="container" id="selfportrait">
+            <div class="container" id="blurb">
                 Phone No: 1800-555-555
                 <br>
                 Email: example@example.com
             </div>
         </div>
-    </div>
     
     <!-- main content of web page -->
     <main>
@@ -49,7 +46,7 @@
     </main>
 
     <!-- section for most recent blog posts -->
-    <aside>
+    <!-- <aside>
         <h2>My most recent blog posts</h2>
             <ul>
                 <li>
@@ -77,8 +74,10 @@
                     <time datetime="2021-02-20 18:22:00">February 20th 6:22pm</time>
                 </li>
             </ul>
-    </aside>
+    </aside> -->
 
+    <br>
+    <br>
     <!-- footer for copyright -->
     <footer>Copyright © Daniel Bailey. All rights reserved.</footer>
 </body>
