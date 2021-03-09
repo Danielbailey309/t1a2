@@ -8,6 +8,16 @@ $fifthcolor: #59332A;
 
 .container {
     display : grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1em 2fr 1fr 1em 3fr 3fr 1em;
+    grid-template-areas: 
+        "header header"
+        "nav image"
+        "nav details"
+        "title title"
+        "content content"
+        "blog blog"
+        "footer footer";
 }
 
 #navpersonal {
