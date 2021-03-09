@@ -40,7 +40,7 @@ nav {
 }
 
 #selfportrait {
-  grid-area: photo;
+  grid-area: selfportrait;
 }
 
 #emailphone {

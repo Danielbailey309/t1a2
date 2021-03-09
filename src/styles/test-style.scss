@@ -13,12 +13,10 @@ body {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, min-content);
+    grid-template-rows: repeat(3, min-content);
     grid-template-areas:
     "header"
-    "navpersonal"
-    "main"
-    "aside"
+    "majoritycontent"
     "footer";
 }
 
@@ -26,20 +24,16 @@ header {
     grid-area: header;
 }
 
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: aside;
-}
-
-footer {
-    grid-area: footer;
-}
-
-nav {
-    grid-area: nav;
+// grid to contain majority of the content on the page (excluding header and footer)
+#majoritycontent {
+    grid-area: majoritycontent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: 
+        "navpersonal"
+        "main"
+        "aside";
 }
 
 // grid to contain nav and personal
@@ -56,10 +50,26 @@ nav {
     "nav emailphone";
 }
 
+nav {
+    grid-area: nav;
+}
+
 #selfportrait {
     grid-area: selfportrait;
 }
 
 #emailphone {
     grid-area: emailphone;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
 }

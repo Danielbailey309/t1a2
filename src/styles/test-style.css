@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas: "header" "majoritycontent" "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+#majoritycontent {
+  grid-area: majoritycontent;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas: "navpersonal" "main" "aside";
+}
+
+#navpersonal {
+  grid-area: navpersonal;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, -webkit-min-content);
+  grid-template-rows: repeat(5, min-content);
+  grid-template-areas: "nav selfportrait" "nav selfportrait" "nav selfportrait" "nav emailphone" "nav emailphone";
+}
+
+nav {
+  grid-area: nav;
+}
+
+#selfportrait {
+  grid-area: selfportrait;
+}
+
+#emailphone {
+  grid-area: emailphone;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}/*# sourceMappingURL=test-style.css.map */
