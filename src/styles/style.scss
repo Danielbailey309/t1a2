@@ -1,12 +1,4 @@
-
-// Assigning colour pallette for website
-$primarycolor: #A9C6D9;
-$secondarycolor: #88A67B;
-$thirdcolor: #A6705D;
-$fourthcolor: #F24C3D;
-$fifthcolor: #59332A;
-
-// v1 of website design. no longer used. Redesigned layout starts on line 69
+// v1 of website design. no longer used. Redesigned layout starts around line 58
 
 // body {
 //     display: grid;
@@ -62,42 +54,116 @@ $fifthcolor: #59332A;
 //     grid-area: emailphone;
 // }
 
+
+// Assigning colour pallette for website
+$firstcolor: #E6EFE9;
+$secondcolor: #C5F4E0;
+$thirdcolor: #C2EABA;
+$fourthcolor: #A7C4A0;
+$fifthcolor: #8F8389;
+
+// importing font styles from google fonts
+    // titles
+    @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+
+    // main content
+    @import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+
+// mixins
+@mixin title {
+    font-family: 'Commissioner', sans-serif;
+}
+
+@mixin maincontent {
+    font-family: 'Fjord One', serif;
+}
+
+@mixin addpadding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+* {
+    width: 100%;
+    margin: 0px;
+}
+
+img {
+    width: fit-content;
+}
+
+header {
+    @include addpadding;
+    background-color: $firstcolor;
+}
+
+nav {
+    @include addpadding;
+    background-color: $secondcolor;
+    h2 {
+        padding-bottom: 1em;
+    }
+}
+
+#personal {
+    background-color: $thirdcolor;
+    img {
+        @include addpadding();
+    }
+}
+
+#phonemail {
+    @include addpadding;
+}
+
+main {
+    @include addpadding;
+    background-color: $fourthcolor;
+    h1 {
+        padding-bottom: 1em;
+    }
+}
+
+.socicon {
+    width: 3em;
+    height: 3em;
+}
+
+#socgrid {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content;
+    justify-content: center;
+}
+
+.social {
+    padding: 1em;
+}
+
+footer {
+    @include addpadding;
+    background-color: $fifthcolor;
+}
+
 body {
+    @include maincontent;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    // grid-template-columns: 1fr;
-    // grid-template-rows: repeat(3, min-content);
-    // grid-template-areas:
-    // "header"
-    // "nav"
-    // "selfportrait"
-    // "blurb"
-    // "main"
-    // "footer";
+    text-align: center;
 }
 
-// header {
-//     grid-area: header;
-// }
+.title {
+    @include title;
+}
 
-// nav {
-//     grid-area: nav;
-// }
+#hamburger {
+    height: 20px;
+    width: 20px;
+}
 
-// #selfportrait {
-//     grid-area: selfportrait;
-// }
-
-// #blurb {
-//     grid-area: blurb;
-// }
-
-// main {
-//     grid-area: main;
-// }
-
-// footer {
-//     grid-area: footer;
-// }
+#navitems {
+    // hides the navitems until the hamburger is clicked
+    display: none;
+}
