@@ -12,47 +12,48 @@
         <h1 class="title">Daniel Bailey</h1>
     </header>
     
-        <nav class="container" id="navgrid">
-            <!-- div to make title and hamburger on the same line -->
-            <div>
-                <h2 class="title">Navigation</h2>
-                <a href="javascript:void(0);" onclick="myFunction()">
-                    <img src="img/hamburger.png" id="hamburger">
-                </a>
-            </div>
-            <ul id="navitems" class="title">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+    <nav class="container" id="navgrid">
+        <!-- div to make title and hamburger on the same line -->
+        <div id="navburger">
+            <h2 class="title">Navigation</h2>
+            <a href="javascript:void(0);" onclick="myFunction()">
+                <img src="img/hamburger.png" id="hamburger">
+            </a>
+        </div>
+        <div id="navitems" class="title hidden">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
         
         <!-- personal area for self portrait and details -->
-        <div id="personal">
-            <img src="https://picsum.photos/200" alt="Daniel Mugshot" class="container" id="selfportrait">
-            <div class="container" id="blurb">
-                <h4 class="title">Hi, I'm Dan! Welcome to my page!</h4>
-                <!-- div to add padding between salutation and detail. Just for neatness' sake -->
-                <div id="phonemail">
-                    Phone No: 1800-555-555
-                    <br>
-                    Email: example@example.com
-                </div>
+    <section id="personal" class="container">
+        <img src="https://picsum.photos/200" alt="Daniel Mugshot" class="container" id="selfportrait">
+        <article class="container" id="blurb">
+            <h4 class="title">Hi, I'm Dan! Welcome to my page!</h4>
+            <!-- div to add padding between salutation and detail. Just for neatness' sake -->
+            <div id="phonemail">
+                Phone No: 1800-555-555
+                <br>
+                Email: example@example.com
             </div>
-        </div>
+        </article>
+    </section>
     
     <!-- main content of web page -->
     <main>
         <h1 class="title">Home</h1>
-        <article>
+        <section>
             Welcome to my portfolio! 
             My name is Daniel and I'm a young professional seeking exciting new employment opportunities. 
             Take a look around this web site that I designed and learn some things about me and the work I've done! 
             Also, feel free to 
             <a href="contact.html">get in contact with me</a> 
             if you like what you see.
-        </article>
+        </section>
+        <img src="https://picsum.photos/500/200" alt="professional photo">
     </main>
 
     <!-- section for most recent blog posts -->
@@ -88,18 +89,38 @@
 
 
     <!-- footer for copyright -->
-    <footer>Copyright © Daniel Bailey. All rights reserved.</footer>
+    <footer class="container">Copyright © Daniel Bailey. All rights reserved.</footer>
     
     <!-- Javascript to open navigation links when hamburger menu is clicked -->
     <script>
         function myFunction() {
-          var x = document.getElementById("navitems");
-          if (x.style.display === "block") {
-            x.style.display = "none";
+        //   var x = document.getElementById("navitems");
+        //   var y = document.getElementById("hamburger");
+          if (window.innerWidth <= 400) {
+              let navitems = document.getElementById("navitems")
+              let hambuger = document.getElementById("hamburger")
+              console.log(hambuger)
+              hambuger.parentElement.classList.remove("hidden")
+              navitems.classList.add("hidden")
           } else {
-            x.style.display = "block";
+                let navitems = document.getElementById("navitems")
+                let hambuger = document.getElementById("hamburger")
+                navitems.classList.add("hidden")
+                hambuger.parentElement.classList.remove("hidden")
           }
         }
+          function handleClick() {
+              let navitems = document.getElementById("navitems")
+              console.log(navitems.classList)
+              if (navitems.classList.contains("hidden")) {
+                  navitems.classList.remove("hidden")
+                } else {
+                  navitems.classList.add("hidden")
+              }
+          }
+        let burger = document.getElementById("hamburger")
+        window.addEventListener("resize", myFunction)
+        burger.addEventListener("click", handleClick)
     </script>
 </body>
 </html>

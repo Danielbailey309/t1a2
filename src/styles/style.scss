@@ -84,8 +84,7 @@ $fifthcolor: #8F8389;
 }
 
 * {
-    width: 100%;
-    margin: 0px;
+    margin: 0;
     box-sizing: border-box;
 
 }
@@ -93,15 +92,21 @@ $fifthcolor: #8F8389;
 body {
     @include maincontent;
     justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0px;
+}
+
+.title {
+    @include title;
+}
+
+.container {
+    width: 100%
 }
 
 img {
-    width: fit-content;
+    max-width: fit-content;
 }
 
 header {
@@ -112,16 +117,44 @@ header {
 nav {
     @include addpadding;
     background-color: $secondcolor;
-    div {
-        flex-direction: column;
+    // h2 {
+    //     padding-bottom: 1em;
+    // }
+}
+
+// #navgrid {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//     align-items: center;
+// }
+
+#navburger {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#hamburger {
+    height: 20px;
+    width: 20px;
+}
+
+#navitems {
+    // makes the navitems invisible until the hamburger is clicked
+    // display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    a {
+        color: black;
+        background-color: $fourthcolor;
+        padding: 1em;
+        transition: .2s;
     }
-    h2 {
-        padding-bottom: 1em;
-    }
-    ul {
-        li {
-            @include addpadding;
-        }
+    a:hover {
+        background-color: $fifthcolor;
+        color: $firstcolor;
     }
 }
 
@@ -138,9 +171,19 @@ nav {
 
 main {
     @include addpadding;
+    width:100%;
     background-color: $fourthcolor;
     h1 {
         padding-bottom: 1em;
+    }
+    section {
+        padding: 1em;
+        a {
+            color: rgb(0, 51, 58);
+        }
+    }
+    img {
+        width: 80%;
     }
 }
 
@@ -171,21 +214,31 @@ main {
     height: 50px;
 }
 
+.hidden {
+    display: none
+}
+
 footer {
     @include addpadding;
     background-color: $fifthcolor;
 }
 
-.title {
-    @include title;
-}
 
-#hamburger {
-    height: 20px;
-    width: 20px;
-}
 
-#navitems {
-    // hides the navitems until the hamburger is clicked
-    display: none;
+@media only screen and (min-width: 401px) {
+    #navburger {
+        justify-content: center;
+    }
+    #hamburger {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    #navitems {
+        display: flex;
+        flex-direction: row;
+        a {
+            border-radius: 15px;
+        }
+    }
 }

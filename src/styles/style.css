@@ -1,25 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjord+One&display=swap");
 * {
-  width: 100%;
-  margin: 0px;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Fjord One", serif;
   justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0px;
+}
+
+.title {
+  font-family: "Commissioner", sans-serif;
+}
+
+.container {
+  width: 100%;
 }
 
 img {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 header {
@@ -33,15 +38,32 @@ nav {
   padding-bottom: 1rem;
   background-color: #C5F4E0;
 }
-nav div {
+
+#navburger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#hamburger {
+  height: 20px;
+  width: 20px;
+}
+
+#navitems {
   flex-direction: column;
+  justify-content: space-evenly;
 }
-nav h2 {
-  padding-bottom: 1em;
+#navitems a {
+  color: black;
+  background-color: #A7C4A0;
+  padding: 1em;
+  transition: 0.2s;
 }
-nav ul li {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+#navitems a:hover {
+  background-color: #8F8389;
+  color: #E6EFE9;
 }
 
 #personal {
@@ -60,10 +82,20 @@ nav ul li {
 main {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  width: 100%;
   background-color: #A7C4A0;
 }
 main h1 {
   padding-bottom: 1em;
+}
+main section {
+  padding: 1em;
+}
+main section a {
+  color: #00333a;
+}
+main img {
+  width: 80%;
 }
 
 .socicon {
@@ -95,21 +127,32 @@ main h1 {
   height: 50px;
 }
 
+.hidden {
+  display: none;
+}
+
 footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #8F8389;
 }
 
-.title {
-  font-family: "Commissioner", sans-serif;
-}
+@media only screen and (min-width: 401px) {
+  #navburger {
+    justify-content: center;
+  }
 
-#hamburger {
-  height: 20px;
-  width: 20px;
-}
+  #hamburger {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 
-#navitems {
-  display: none;
+  #navitems {
+    display: flex;
+    flex-direction: row;
+  }
+  #navitems a {
+    border-radius: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+main {
+    @include addpadding;
+    width:100%;
+    background-color: $fourthcolor;
+    h1 {
+        padding-bottom: 1em;
+    }
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        article {
+            width: 200px;
+            height: 200px;
+        }
+        img {
+            padding-top: 1em;
+        }
+    }
+}
