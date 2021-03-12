@@ -1,0 +1,17 @@
+main {
+  width: 100%;
+}
+main h1 {
+  padding-bottom: 1em;
+}
+main section {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section article {
+  width: 200px;
+  height: 200px;
+}
+main section img {
+  padding-top: 1em;
+}/*# sourceMappingURL=blog-style.css.map */

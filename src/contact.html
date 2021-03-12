@@ -12,110 +12,106 @@
         <h1 class="title">Daniel Bailey</h1>
     </header>
     
-        <nav class="container" id="navgrid">
+    <nav class="container" id="navgrid">
+        <!-- div to make title and hamburger on the same line -->
+        <div id="navburger">
             <h2 class="title">Navigation</h2>
             <a href="javascript:void(0);" onclick="myFunction()">
-                <img src="img/hamburger.png" id="hamburger">
+                <img src="img/hamburger.png" alt="hamburger.png" id="hamburger">
             </a>
-            <ul id="navitems" class="title">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+        </div>
+        <nav id="navitems" class="title hidden">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
         </nav>
+    </nav>
         
         <!-- personal area for self portrait and details -->
-        <div id="personal">
-            <img src="https://picsum.photos/200" alt="Daniel Mugshot" class="container" id="selfportrait">
-            <div class="container" id="blurb">
-                <h4 class="title">Hi, I'm Dan! Welcome to my page!</h4>
-                <!-- div to add padding between salutation and detail. Just for neatness' sake -->
-                <div id="phonemail">
-                    Phone No: 1800-555-555
-                    <br>
-                    Email: example@example.com
-                </div>
-            </div>
-        </div>
+    <section id="personal" class="container">
+        <img src="img/mugshot.jpg" alt="Daniel Mugshot" id="selfportrait">
+        <article id="blurb">
+            <h4 class="title">Hi, I'm Dan! Welcome to my page!</h4>
+            <!-- div to add padding between salutation and detail. Just for neatness' sake -->
+            <section id="phonemail">
+                Phone No: 1800-555-555
+                <br>
+                Email: example@example.com
+            </section>
+        </article>
+    </section>
     
     <!-- main content of web page -->
-    <main>
+    <main class="container">
         <h1 class="title">Contact</h1>
-        <article>
+        <section>
             To get in contact with me, please email me at example@example.com or call my work phone on 1800-555-555.
             Alternatively, you can connect with me on any of the following:
-        </article>
-        <!-- Container to make a grid out of all social media links -->
-        <div id="socgrid">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/daniel-bailey-5b41221a0/">
-                <img src="img/linkedin.png" alt="LinkedIn Icon" class="socicon">
-                </a>
+        </section>
+            <!-- Grid for social media icons -->
+            <!-- These icons only show up when the screen is resized. Not intentional -->
+            <div id="socgrid">
+                <section class="social">
+                    <a href="https://www.linkedin.com">
+                    <img src="img/linkedin.png" alt="LinkedIn Icon" class="socicon">
+                    </a>
+                </section>
+                <section class="social">
+                    <a href="https://www.facebook.com/">
+                    <img src="img/facebook.jpg" alt="Facebook Icon" class="socicon">
+                    </a>
+                </section>
+                <section class="social">
+                    <a href="https://twitter.com/">
+                    <img src="img/twitter.png" alt="Twitter Icon" class="socicon" id="twiticon">
+                    </a>
+                </section>
+                <section class="social">
+                    <a href="https://github.com/Danielbailey309">
+                    <img src="img/github.png" alt="GitHub Icon" class="socicon">
+                    </a>
+                </section>
             </div>
-            <div class="social">
-                <a href="https://www.facebook.com/daniel.bailey.79219/">
-                <img src="img/facebook.jpg" alt="Facebook Icon" class="socicon">
-                </a>
-            </div>
-            <div class="social">
-                <a href="https://twitter.com/DanielB09503613">
-                <img src="img/twitter.png" alt="Twitter Icon" class="socicon">
-                </a>
-            </div>
-            <div class="social">
-                <a href="https://github.com/Danielbailey309">
-                <img src="img/github.png" alt="GitHub Icon" class="socicon">
-                </a>
-            </div>
-        </div>
+        <img src="https://picsum.photos/500/200" alt="professional photo" id="banner">
     </main>
 
-    <!-- section for most recent blog posts -->
-    <!-- <aside>
-        <h2>My most recent blog posts</h2>
-            <ul>
-                <li>
-                    <h3>I'm learning to code!</h3>
-                    <time datetime="2021-03-07 20:00:00">March 7th 8:00pm</time>
-                </li>
-                <li>
-                    <h3>Some more things that happened</h3>
-                    <time datetime="2021-03-06 19:31:00">March 6th 7:31pm</time>
-                </li>
-                <li>
-                    <h3>Moving out today</h3>
-                    <time datetime="2021-02-27 19:05:00">February 27th 7:05pm</time>
-                </li>
-                <li>
-                    <h3>Listen to Blue Savannah Underworld</h3>
-                    <time datetime="2021-02-26 20:01:00">February 26th 8:01pm</time>
-                </li>
-                <li>
-                    <h3>How to survive an ostrich attack</h3>
-                    <time datetime="2021-02-21 21:49:00">February 21st 9:49pm</time>
-                </li>
-                <li>
-                    <h3>My phone broke!</h3>
-                    <time datetime="2021-02-20 18:22:00">February 20th 6:22pm</time>
-                </li>
-            </ul>
-    </aside> -->
-
-
     <!-- footer for copyright -->
-    <footer>Copyright © Daniel Bailey. All rights reserved.</footer>
+    <footer class="container">Copyright © Daniel Bailey. All rights reserved.</footer>
     
     <!-- Javascript to open navigation links when hamburger menu is clicked -->
     <script>
         function myFunction() {
-          var x = document.getElementById("navitems");
-          if (x.style.display === "block") {
-            x.style.display = "none";
+        //   var x = document.getElementById("navitems");
+        //   var y = document.getElementById("hamburger");
+          if (window.innerWidth <= 400) {
+              let navitems = document.getElementById("navitems")
+              let hamburger = document.getElementById("hamburger")
+            //   READ THIS: this "log" line is ABSOLUTELY NECESSARY for the whole thing to work and it has to be spelled "hambuger". DON'T DELETE
+              console.log(hambuger)
+              hamburger.parentElement.classList.remove("hidden")
+              navitems.classList.add("hidden")
           } else {
-            x.style.display = "block";
+                let navitems = document.getElementById("navitems")
+                let hamburger = document.getElementById("hamburger")
+                navitems.style += "display: none"
+                hamburger.parentElement.classList.add("hidden")
           }
         }
+          function handleClick() {
+              let navitems = document.getElementById("navitems")
+              console.log(navitems.classList)
+              if (navitems.classList.contains("hidden")) {
+                  navitems.classList.remove("hidden")
+                  navitems.classList.add("shown")
+                } else {
+                  navitems.classList.add("hidden")
+                  navitems.classList.remove("shown")
+              }
+          }
+        let burger = document.getElementById("hamburger")
+        window.addEventListener("resize", myFunction)
+        burger.addEventListener("click", handleClick)
     </script>
 </body>
 </html>

@@ -21,34 +21,39 @@ $fifthcolor: #8F8389;
     font-family: 'Fjord One', serif;
 }
 
+// padding for better spacing of the different sections of the document
 @mixin addpadding {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
+// default settings recommended in lecture
 * {
     margin: 0;
     box-sizing: border-box;
-
+    @include maincontent;
 }
 
+// separates most of the content of the page into flexboxes and gives them some nice formatting
 body {
-    @include maincontent;
     justify-content: center;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
+// all the short, important titles for the document
 .title {
     @include title;
 }
 
+// each area of the page, separated by colour and outline
 .container {
     width: 100%;
     outline: 2px solid black;
 }
 
+// ensures images don't go larger than their native size
 img {
     max-width: fit-content;
 }
@@ -58,6 +63,7 @@ header {
     background-color: $firstcolor;
 }
 
+// combined area of navigation header and burger menu, to make them side-by-side
 #navburger {
     display: flex;
     flex-wrap: wrap;
@@ -70,11 +76,13 @@ header {
     }
 }
 
+// hamburger menu icon
 #hamburger {
     height: 20px;
     width: 20px;
 }
 
+// all of the items within the navigation menu i.e. the pages of the website
 #navitems {
     // makes the navitems invisible until the hamburger is clicked
     // display: none;
@@ -93,6 +101,7 @@ header {
     }
 }
 
+// area for my portrait and details
 #personal {
     background-color: $thirdcolor;
     display: flex;
@@ -100,6 +109,7 @@ header {
     align-items: center;
     @include addpadding;
     img {
+        width: 190px;
         margin-bottom: 1em;
         border: 1px solid black;
     }
@@ -116,6 +126,7 @@ header {
     }
 }
 
+// makes the blurb subtly change colour when hovered over. Not essential to the style of the site but I wanted to prove I could do keyframe animations.
 @keyframes blurbhover {
     0% {
         background-color: $fifthcolor;
@@ -128,6 +139,7 @@ header {
     }
 }
 
+// main content of the page. should be the only part that changes between pages.
 main {
     @include addpadding;
     width:100%;
@@ -141,17 +153,21 @@ main {
             color: rgb(0, 51, 58);
         }
     }
-    img {
-        width: 80%;
-        border: 1px solid black;
-    }
 }
 
+// professional looking image at the bottom of main.
+#banner {
+    width: 80%;
+    border: 1px solid black;
+}
+
+// icons for social media links on Contact page.
 .socicon {
     width: 3em;
     height: 3em;
 }
 
+// grid to keep the above icons together
 #socgrid {
     display: grid;
     grid-template-columns: min-content min-content;
@@ -159,25 +175,23 @@ main {
     justify-content: center;
 }
 
+// makes sure the icons aren't too close together
 .social {
     padding: 1em;
 }
 
-#blogrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
+// makes all the blog icons the same size
 .blogicon {
     width: 50px;
     height: 50px;
 }
 
+// class for hiding the navbar/hamburger as the page increases or decreases in width. Essential part of the js code for hamburger menu
 .hidden {
     display: none;
 }
 
+// opposite of above. Only applies to navitems. This sets up the navitems when they appear.
 .shown {
     display: flex;
     flex-direction: column;
@@ -186,19 +200,24 @@ main {
     }
 }
 
+// colouring and a bit of space for the footer.
 footer {
     @include addpadding;
     background-color: $fifthcolor;
 }
 
+// stretches the navbar to fill the screen as it expands.
 @media only screen and (min-width: 401px) {
     #navburger {
         justify-content: center;
     }
+    // reduce to 0 for neatness sake re: navigation title alignment. Is not used to make the hamburger invisible when resizing.
     #hamburger {
         width: 0;
         height: 0;
     }
+
+    // each navitem gets a cute little rounded rectangle
     #navitems {
         display: flex;
         flex-direction: row;

@@ -3,10 +3,10 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Fjord One", serif;
 }
 
 body {
-  font-family: "Fjord One", serif;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -77,6 +77,7 @@ header {
   padding-bottom: 1rem;
 }
 #personal img {
+  width: 190px;
   margin-bottom: 1em;
   border: 1px solid black;
 }
@@ -133,7 +134,8 @@ main section {
 main section a {
   color: #00333a;
 }
-main img {
+
+#banner {
   width: 80%;
   border: 1px solid black;
 }
@@ -154,12 +156,6 @@ main img {
 
 .social {
   padding: 1em;
-}
-
-#blogrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .blogicon {
