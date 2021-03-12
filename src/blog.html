@@ -5,74 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Daniel Bailey</h1>
+    <header class="container">
+        <h1 class="title">Daniel Bailey</h1>
     </header>
     
-    <nav>
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </nav>
-    
-    <!-- personal area for self portrait and details -->
-    <div>
-        <img src="https://picsum.photos/200" alt="Daniel Mugshot">
-        <div>
-            Phone No: 1800-555-555
-            <br>
-            Email: example@example.com
+        <nav class="container" id="navgrid">
+            <h2 class="title">Navigation</h2>
+            <a href="javascript:void(0);" onclick="myFunction()">
+                <img src="img/hamburger.png" id="hamburger">
+            </a>
+            <ul id="navitems" class="title">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        
+        <!-- personal area for self portrait and details -->
+        <div id="personal">
+            <img src="https://picsum.photos/200" alt="Daniel Mugshot" class="container" id="selfportrait">
+            <div class="container" id="blurb">
+                <h4 class="title">Hi, I'm Dan! Welcome to my page!</h4>
+                <!-- div to add padding between salutation and detail. Just for neatness' sake -->
+                <div id="phonemail">
+                    Phone No: 1800-555-555
+                    <br>
+                    Email: example@example.com
+                </div>
+            </div>
         </div>
-    </div>
     
     <!-- main content of web page -->
-    <div>
-        <h1>Blog</h1>
-    </div>
-    
-    <div>
-        <!-- Grid of blog posts and images -->
-        <div>
-            <img src="https://picsum.photos/200" alt="Blog post 1 photo">
-            <h2>I'm learning to code!</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus ex vel nesciunt repellat quidem iste sapiente nobis minus? Aut consequatur consectetur quidem necessitatibus error dicta, officiis adipisci non harum.
-            <time datetime="2021-03-07 20:00:00">March 7th 8:00pm</time>
-        </div>
-        <div>
-            <img src="https://picsum.photos/200" alt="Blog post 2 photo">
-            <h2>Some more things happened</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus ex vel nesciunt repellat quidem iste sapiente nobis minus? Aut consequatur consectetur quidem necessitatibus error dicta, officiis adipisci non harum.
-            <time datetime="2021-03-06 19:31:00">March 6th 7:31pm</time>
-        </div>
-        <div>
-            <img src="https://picsum.photos/200" alt="Blog post 3 photo">
-            <h2>Moving out today</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus ex vel nesciunt repellat quidem iste sapiente nobis minus? Aut consequatur consectetur quidem necessitatibus error dicta, officiis adipisci non harum.
-            <time datetime="2021-02-27 19:05:00">February 27th 7:05pm</time>
-        </div>
-        <div>
-            <img src="https://picsum.photos/200" alt="Blog post 4 photo">
-            <h2>Listen to Blue Savannah Underworld</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus ex vel nesciunt repellat quidem iste sapiente nobis minus? Aut consequatur consectetur quidem necessitatibus error dicta, officiis adipisci non harum.
-            <time datetime="2021-02-26 20:01:00">February 26th 8:01pm</time>
-        </div>
-        <div>
-            <img src="https://picsum.photos/200" alt="Blog post 5 photo">
-            <h2>I'm learning to code!</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam necessitatibus ex vel nesciunt repellat quidem iste sapiente nobis minus? Aut consequatur consectetur quidem necessitatibus error dicta, officiis adipisci non harum.
-            <time datetime="2021-02-21 21:49:00">February 21st 9:49pm</time>
-        </div>
-    </div>
+    <main>
+        <h1 class="title">Blog</h1>
+        <article>
+            <!-- Grid for containing all blog posts -->
+            <div id="blogrid">
+                <a href="post1.html">
+                    <img src="https://picsum.photos/200" alt="Blog post 1 photo" class="blogicon">
+                    <h2>I'm learning to code!</h2>
+                    <time datetime="2021-03-07 20:00:00">March 7th 8:00pm</time>
+                </a>
+                <a href="post2.html">
+                    <img src="https://picsum.photos/200" alt="Blog post 2 photo" class="blogicon">
+                    <h2>Some more things happened</h2>
+                    <time datetime="2021-03-06 19:31:00">March 6th 7:31pm</time>
+                </a>
+                <a href="post3.html">
+                    <img src="https://picsum.photos/200" alt="Blog post 3 photo" class="blogicon">
+                    <h2>Moving out today</h2>
+                    <time datetime="2021-02-27 19:05:00">February 27th 7:05pm</time>
+                </a>
+                <a href="post4.html">
+                    <img src="https://picsum.photos/200" alt="Blog post 4 photo" class="blogicon">
+                    <h2>Listen to Blue Savannah Underworld</h2>
+                    <time datetime="2021-02-26 20:01:00">February 26th 8:01pm</time>
+                </a>
+                <a href="post5.html">
+                    <img src="https://picsum.photos/200" alt="Blog post 5 photo" class="blogicon">
+                    <h2>I'm learning to code!</h2>
+                    <time datetime="2021-02-21 21:49:00">February 21st 9:49pm</time>
+                </a>
+            </div>
+        </article>
+    </main>
 
     <!-- section for most recent blog posts -->
-    <div>
+    <!-- <aside>
         <h2>My most recent blog posts</h2>
             <ul>
                 <li>
@@ -100,9 +103,22 @@
                     <time datetime="2021-02-20 18:22:00">February 20th 6:22pm</time>
                 </li>
             </ul>
-    </div>
+    </aside> -->
+
 
     <!-- footer for copyright -->
     <footer>Copyright © Daniel Bailey. All rights reserved.</footer>
+    
+    <!-- Javascript to open navigation links when hamburger menu is clicked -->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("navitems");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
 </body>
 </html>

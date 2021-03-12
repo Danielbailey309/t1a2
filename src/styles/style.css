@@ -3,6 +3,17 @@
 * {
   width: 100%;
   margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fjord One", serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px;
 }
 
 img {
@@ -22,8 +33,15 @@ nav {
   padding-bottom: 1rem;
   background-color: #C5F4E0;
 }
+nav div {
+  flex-direction: column;
+}
 nav h2 {
   padding-bottom: 1em;
+}
+nav ul li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #personal {
@@ -66,19 +84,21 @@ main h1 {
   padding: 1em;
 }
 
+#blogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.blogicon {
+  width: 50px;
+  height: 50px;
+}
+
 footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #8F8389;
-}
-
-body {
-  font-family: "Fjord One", serif;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 .title {
