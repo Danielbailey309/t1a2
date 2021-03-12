@@ -20,30 +20,30 @@
                 <img src="img/hamburger.png" id="hamburger">
             </a>
         </div>
-        <div id="navitems" class="title hidden">
+        <nav id="navitems" class="title hidden">
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="contact.html">Contact</a>
             <a href="blog.html">Blog</a>
-        </div>
+        </nav>
     </nav>
         
         <!-- personal area for self portrait and details -->
     <section id="personal" class="container">
-        <img src="https://picsum.photos/200" alt="Daniel Mugshot" class="container" id="selfportrait">
-        <article class="container" id="blurb">
+        <img src="https://picsum.photos/200" alt="Daniel Mugshot" id="selfportrait">
+        <article id="blurb">
             <h4 class="title">Hi, I'm Dan! Welcome to my page!</h4>
             <!-- div to add padding between salutation and detail. Just for neatness' sake -->
-            <div id="phonemail">
+            <section id="phonemail">
                 Phone No: 1800-555-555
                 <br>
                 Email: example@example.com
-            </div>
+            </section>
         </article>
     </section>
     
     <!-- main content of web page -->
-    <main>
+    <main class="container">
         <h1 class="title">Home</h1>
         <section>
             Welcome to my portfolio! 
@@ -56,38 +56,6 @@
         <img src="https://picsum.photos/500/200" alt="professional photo">
     </main>
 
-    <!-- section for most recent blog posts -->
-    <!-- <aside>
-        <h2>My most recent blog posts</h2>
-            <ul>
-                <li>
-                    <h3>I'm learning to code!</h3>
-                    <time datetime="2021-03-07 20:00:00">March 7th 8:00pm</time>
-                </li>
-                <li>
-                    <h3>Some more things that happened</h3>
-                    <time datetime="2021-03-06 19:31:00">March 6th 7:31pm</time>
-                </li>
-                <li>
-                    <h3>Moving out today</h3>
-                    <time datetime="2021-02-27 19:05:00">February 27th 7:05pm</time>
-                </li>
-                <li>
-                    <h3>Listen to Blue Savannah Underworld</h3>
-                    <time datetime="2021-02-26 20:01:00">February 26th 8:01pm</time>
-                </li>
-                <li>
-                    <h3>How to survive an ostrich attack</h3>
-                    <time datetime="2021-02-21 21:49:00">February 21st 9:49pm</time>
-                </li>
-                <li>
-                    <h3>My phone broke!</h3>
-                    <time datetime="2021-02-20 18:22:00">February 20th 6:22pm</time>
-                </li>
-            </ul>
-    </aside> -->
-
-
     <!-- footer for copyright -->
     <footer class="container">Copyright © Daniel Bailey. All rights reserved.</footer>
     
@@ -99,14 +67,15 @@
           if (window.innerWidth <= 400) {
               let navitems = document.getElementById("navitems")
               let hamburger = document.getElementById("hamburger")
+            //   READ THIS: this "log" line is ABSOLUTELY NECESSARY for the whole thing to work and it has to be spelled "hambuger". DON'T DELETE
               console.log(hambuger)
               hamburger.parentElement.classList.remove("hidden")
               navitems.classList.add("hidden")
           } else {
                 let navitems = document.getElementById("navitems")
                 let hamburger = document.getElementById("hamburger")
-                navitems.classList.add("hidden")
-                hamburger.parentElement.classList.remove("hidden")
+                navitems.style += "display: none"
+                hamburger.parentElement.classList.add("hidden")
           }
         }
           function handleClick() {
@@ -114,8 +83,10 @@
               console.log(navitems.classList)
               if (navitems.classList.contains("hidden")) {
                   navitems.classList.remove("hidden")
+                  navitems.classList.add("shown")
                 } else {
                   navitems.classList.add("hidden")
+                  navitems.classList.remove("shown")
               }
           }
         let burger = document.getElementById("hamburger")

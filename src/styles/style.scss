@@ -1,61 +1,4 @@
-// v1 of website design. no longer used. Redesigned layout starts around line 58
-
-// body {
-//     display: grid;
-//     grid-template-columns: 100%;
-//     grid-template-rows: repeat(5, min-content);
-//     grid-template-areas:
-//     "header"
-//     "navpersonal"
-//     "main"
-//     "aside"
-//     "footer";
-// }
-
-// header {
-//     grid-area: header;
-// }
-
-// main {
-//     grid-area: main;
-// }
-
-// aside {
-//     grid-area: aside;
-// }
-
-// footer {
-//     grid-area: footer;
-// }
-
-// // grid to contain nav and personal
-// #navpersonal {
-//     grid-area: navpersonal;
-//     display: grid;
-//     grid-template-columns: 1fr 2fr;
-//     grid-template-rows: repeat(5, min-content);
-//     grid-template-areas:
-//     "navitems selfportrait"
-//     "navitems selfportrait"
-//     "navitems selfportrait"
-//     "navitems emailphone"
-//     "navitems emailphone";
-// }
-
-// #navitems {
-//     grid-area: navitems;
-// }
-
-// #selfportrait {
-//     grid-area: selfportrait;
-// }
-
-// #emailphone {
-//     grid-area: emailphone;
-// }
-
-
-// Assigning colour pallette for website
+// colour pallette for website
 $firstcolor: #E6EFE9;
 $secondcolor: #C5F4E0;
 $thirdcolor: #C2EABA;
@@ -69,7 +12,7 @@ $fifthcolor: #8F8389;
     // main content
     @import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
 
-// mixins
+
 @mixin title {
     font-family: 'Commissioner', sans-serif;
 }
@@ -102,7 +45,8 @@ body {
 }
 
 .container {
-    width: 100%
+    width: 100%;
+    outline: 2px solid black;
 }
 
 img {
@@ -114,26 +58,16 @@ header {
     background-color: $firstcolor;
 }
 
-nav {
-    @include addpadding;
-    background-color: $secondcolor;
-    // h2 {
-    //     padding-bottom: 1em;
-    // }
-}
-
-// #navgrid {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-around;
-//     align-items: center;
-// }
-
 #navburger {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    @include addpadding;
+    background-color: $secondcolor;
+    a {
+        display: block
+    }
 }
 
 #hamburger {
@@ -146,6 +80,7 @@ nav {
     // display: none;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: $secondcolor;
     a {
         color: black;
         background-color: $fourthcolor;
@@ -160,13 +95,37 @@ nav {
 
 #personal {
     background-color: $thirdcolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include addpadding;
     img {
-        @include addpadding();
+        margin-bottom: 1em;
+        border: 1px solid black;
+    }
+    article {
+        padding: 1em;
+        border-radius: 25px;
+        border: 1px solid black;
+        background-color: $fifthcolor;
+    }
+    article:hover {
+        animation-name: blurbhover;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
     }
 }
 
-#phonemail {
-    @include addpadding;
+@keyframes blurbhover {
+    0% {
+        background-color: $fifthcolor;
+    }
+    50% {
+        background-color: #a56b6b;
+    }
+    100% {
+        background-color: $fifthcolor;
+    }
 }
 
 main {
@@ -184,6 +143,7 @@ main {
     }
     img {
         width: 80%;
+        border: 1px solid black;
     }
 }
 
@@ -215,15 +175,21 @@ main {
 }
 
 .hidden {
-    display: none
+    display: none;
+}
+
+.shown {
+    display: flex;
+    flex-direction: column;
+    a {
+        outline: 1px solid black;
+    }
 }
 
 footer {
     @include addpadding;
     background-color: $fifthcolor;
 }
-
-
 
 @media only screen and (min-width: 401px) {
     #navburger {
@@ -238,6 +204,8 @@ footer {
         flex-direction: row;
         a {
             border-radius: 15px;
+            border: 1px solid black;
         }
+        padding-bottom: 1em
     }
 }

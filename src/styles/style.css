@@ -19,6 +19,7 @@ body {
 
 .container {
   width: 100%;
+  outline: 2px solid black;
 }
 
 img {
@@ -33,17 +34,17 @@ header {
   background-color: #E6EFE9;
 }
 
-nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #C5F4E0;
-}
-
 #navburger {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #C5F4E0;
+}
+#navburger a {
+  display: block;
 }
 
 #hamburger {
@@ -54,6 +55,7 @@ nav {
 #navitems {
   flex-direction: column;
   justify-content: space-evenly;
+  background-color: #C5F4E0;
 }
 #navitems a {
   color: black;
@@ -68,17 +70,54 @@ nav {
 
 #personal {
   background-color: #C2EABA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 #personal img {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1em;
+  border: 1px solid black;
+}
+#personal article {
+  padding: 1em;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #8F8389;
+}
+#personal article:hover {
+  -webkit-animation-name: blurbhover;
+          animation-name: blurbhover;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-#phonemail {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+@-webkit-keyframes blurbhover {
+  0% {
+    background-color: #8F8389;
+  }
+  50% {
+    background-color: #a56b6b;
+  }
+  100% {
+    background-color: #8F8389;
+  }
 }
 
+@keyframes blurbhover {
+  0% {
+    background-color: #8F8389;
+  }
+  50% {
+    background-color: #a56b6b;
+  }
+  100% {
+    background-color: #8F8389;
+  }
+}
 main {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -96,6 +135,7 @@ main section a {
 }
 main img {
   width: 80%;
+  border: 1px solid black;
 }
 
 .socicon {
@@ -131,6 +171,14 @@ main img {
   display: none;
 }
 
+.shown {
+  display: flex;
+  flex-direction: column;
+}
+.shown a {
+  outline: 1px solid black;
+}
+
 footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -150,8 +198,10 @@ footer {
   #navitems {
     display: flex;
     flex-direction: row;
+    padding-bottom: 1em;
   }
   #navitems a {
     border-radius: 15px;
+    border: 1px solid black;
   }
 }/*# sourceMappingURL=style.css.map */
