@@ -1,0 +1,83 @@
+commit 7de100022a50415e621e336ab2230eb70df227e6
+Author: daniel <danielbailey309@gmail.com>
+Date:   Sat Mar 13 21:23:02 2021 +1000
+
+    Final submission
+
+commit 88375312634d0d2b3a3d15c2ed359a83c2da0205
+Author: daniel <danielbailey309@gmail.com>
+Date:   Fri Mar 12 23:42:03 2021 +1000
+
+    Final draft. Everything complete
+
+commit b3096d2ba7c0a44387e79a0c5acb6459471e92a4
+Author: daniel <danielbailey309@gmail.com>
+Date:   Fri Mar 12 15:56:03 2021 +1000
+
+    index.html working perfectly. Pretty happy with how it looks
+
+commit a8a0b841f8c720d16c80f126ce07e41380300c75
+Author: daniel <danielbailey309@gmail.com>
+Date:   Fri Mar 12 14:03:51 2021 +1000
+
+    hamburger menu held together with duct tape and hope
+
+commit 9cd2bac4827b773364dd3f65094e2b533316d337
+Author: daniel <danielbailey309@gmail.com>
+Date:   Fri Mar 12 13:48:10 2021 +1000
+
+    buttons added on nav. hamburger js not working
+
+commit cfd19c12a211f8f3d8f544a440335beb6c52f00f
+Author: daniel <danielbailey309@gmail.com>
+Date:   Fri Mar 12 10:48:49 2021 +1000
+
+    working on making nav on the same line. everything works and looks ok
+
+commit ab78e60ef5d5d77c6014099427c5f0a3b2820bca
+Author: daniel <danielbailey309@gmail.com>
+Date:   Fri Mar 12 00:44:48 2021 +1000
+
+    almost done with redesigned site, only Blog left
+
+commit f4f32cea740e6902956685f441460c348da007f9
+Author: daniel <danielbailey309@gmail.com>
+Date:   Tue Mar 9 19:29:50 2021 +1000
+
+    CSS FINALLY working again. website redesigned to v2
+
+commit 13f147a35c0e347b056be5a79b93c226540036ea
+Author: daniel <danielbailey309@gmail.com>
+Date:   Tue Mar 9 13:41:56 2021 +1000
+
+    test.html set up for tablet but index.html isn't working now????
+
+commit 473172b94fe8046063a6c61807c1225af46a6fd2
+Author: daniel <danielbailey309@gmail.com>
+Date:   Tue Mar 9 12:01:21 2021 +1000
+
+    finished working on mobile index.html. hamburger not started
+
+commit 1ebfe2beaef633e93af376754183564804e9a5f9
+Author: daniel <danielbailey309@gmail.com>
+Date:   Tue Mar 9 11:12:27 2021 +1000
+
+    grids working in test.html
+
+commit 6fe7b03f219ca9373dc58c08fbe3e58361785afe
+Author: daniel <danielbailey309@gmail.com>
+Date:   Tue Mar 9 10:42:31 2021 +1000
+
+    css screwed up
+
+commit 29b388a5edf1e86070a80f03911591691b7e466e
+Author: daniel <danielbailey309@gmail.com>
+Date:   Mon Mar 8 18:36:38 2021 +1000
+
+    starting css
+
+commit ffb67df4375e7a44947047aaf06b299159f59342
+Author: daniel <danielbailey309@gmail.com>
+Date:   Mon Mar 8 12:47:24 2021 +1000
+
+    layout of index.html complete
